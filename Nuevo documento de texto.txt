@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combo Box desde PHP</title>
+</head>
+<body>
+    <h2>Combo Box desde PHP</h2>
+    <form action="" method="post">
+        <label for="opciones">Selecciona una opción:</label>
+        <select name="opciones" id="opciones">
+            <?php
+            // Iterar sobre el array de opciones y generar las opciones del combo box
+            foreach ($opciones as $opcion) {
+                echo "<option value='$opcion'>$opcion</option>";
+            }
+            ?>
+        </select>
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
+
+ <?php
+// Ejemplo de datos obtenidos desde PHP
+$opciones = array("Opción 1", "Opción 2", "Opción 3", "Opción 4", "Opción 5");
+?>
